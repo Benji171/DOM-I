@@ -42,8 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navBar = document.querySelectorAll("nav a");
-console.log(navBar);
-navBar.forEach((link, i) => {link.textContent = siteContent.nav[`nav-item-${i++}`]});
+navBar.forEach((link, i) => {link.textContent = siteContent.nav[`nav-item-${i+1}`]});
+
+let realNav = document.querySelector("nav")
+realNav.prepend("BigBoy");
+realNav.append("Kill The Doo");
+
+
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
